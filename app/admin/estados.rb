@@ -4,6 +4,7 @@ ActiveAdmin.register Estado do
     column :id
     column :descricao
     column :sigla
+	column :regiao
     default_actions
   end
 
@@ -12,6 +13,7 @@ ActiveAdmin.register Estado do
       row :id
       row :descricao
       row :sigla
+	  row :regiao
     end
   end
 
@@ -19,6 +21,7 @@ ActiveAdmin.register Estado do
     f.inputs "Cadastro" do
       f.input :descricao
       f.input :sigla
+	  f.input :regiao
     end
     f.actions
   end

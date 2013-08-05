@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(:version => 20130802190400) do
   create_table "estados", :force => true do |t|
     t.string   "descricao"
     t.string   "sigla"
+    t.string   "regiao"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

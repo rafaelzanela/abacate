@@ -3,6 +3,7 @@ class CreateEstados < ActiveRecord::Migration
     create_table :estados do |t|
       t.string :descricao
       t.string :sigla
+	  t.string :regiao
 
       t.timestamps
     end
