@@ -1,5 +1,7 @@
 ActiveAdmin.register Estado do
 
+  menu false
+
   index do
     column :id
     column :descricao

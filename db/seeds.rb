@@ -33,4 +33,18 @@ Estado.create(descricao: 'Mato Grosso do Sul', sigla: 'MS', regiao: 'Centro-Oest
 Estado.create(descricao: 'Mato Grosso', sigla: 'MT', regiao: 'Centro-Oeste')
 Estado.create(descricao: 'Goias', sigla: 'GO', regiao: 'Centro-Oeste')
 Estado.create(descricao: 'Distrito-Federal', sigla: 'DF', regiao: 'Centro-Oeste')
+Estado.create(descricao: 'Outro', sigla: 'OT', regiao: 'Outro')
 
+Raca.create(descricao: 'Branca')
+Raca.create(descricao: 'Morena')
+Raca.create(descricao: 'Parda')
+Raca.create(descricao: 'Negra')
+Raca.create(descricao: 'Preta')
+Raca.create(descricao: 'Amarela')
+Raca.create(descricao: 'Indigina')
+Raca.create(descricao: 'Outras')
+
+EstadoCivil.create(descricao: 'Solteiro(a)')
+EstadoCivil.create(descricao: 'Casado(a)')
+EstadoCivil.create(descricao: 'Divorciado(a)')
+EstadoCivil.create(descricao: 'Viuvo(a)')
