@@ -57,6 +57,8 @@ ActiveAdmin.setup do |config|
   # within the controller.
   config.authentication_method = :authenticate_admin_user!
 
+  config.authorization_adapter = ActiveAdmin::CanCanAdapter
+  
 
   # == Current User
   #
@@ -92,7 +94,9 @@ ActiveAdmin.setup do |config|
   # roots for each namespace.
   #
   # Default:
-  # config.root_to = 'dashboard#index'
+  #
+#  config.root_to = 'active_admin/devise/session#new'
+#  config.root_to = 'cidades#new'
 
   # == Admin Comments
   #
