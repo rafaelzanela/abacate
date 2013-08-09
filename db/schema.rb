@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130806225554) do
+ActiveRecord::Schema.define(:version => 20130809172802) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -41,10 +41,12 @@ ActiveRecord::Schema.define(:version => 20130806225554) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.integer  "role_id"
   end
 
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
+  add_index "admin_users", ["role_id"], :name => "index_admin_users_on_role_id"
 
   create_table "cidades", :force => true do |t|
     t.string   "descricao"
@@ -92,6 +94,12 @@ ActiveRecord::Schema.define(:version => 20130806225554) do
   add_index "pessoas", ["estado_civil_id"], :name => "index_pessoas_on_estado_civil_id"
 
   create_table "racas", :force => true do |t|
+    t.string   "descricao"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "roles", :force => true do |t|
     t.string   "descricao"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false

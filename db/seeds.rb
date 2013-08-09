@@ -58,3 +58,8 @@ GrauInstrucao.create(descricao: 'Ensino superior incompleto')
 GrauInstrucao.create(descricao: 'Ensino superior completo')
 GrauInstrucao.create(descricao: 'Mestrado')
 GrauInstrucao.create(descricao: 'Doutorado')
+
+
+Role.create(descricao: 'ADMIN')
+Role.create(descricao: 'EDITOR')
+Role.create(descricao: 'VISUALIZADOR')
