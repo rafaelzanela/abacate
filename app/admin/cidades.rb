@@ -4,7 +4,9 @@ ActiveAdmin.register Cidade do
     column :id
     column :descricao
     column :codigo_ibge
-    column :estado
+    column :estado do |model|
+      model.estado.to_s
+    end
     default_actions
   end
 
@@ -13,7 +15,9 @@ ActiveAdmin.register Cidade do
       row :id
       row :descricao
       row :codigo_ibge
-      row :estado
+      row :estado do |model|
+        model.estado.to_s
+      end
     end
   end
 

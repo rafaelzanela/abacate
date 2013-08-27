@@ -1,4 +1,4 @@
 class Cidade < ActiveRecord::Base
   belongs_to :estado
-  attr_accessible :codigo_ibge, :descricao, :estado_id
+  attr_accessible :codigo_ibge, :descricao, :estado_id, :estado
 end
