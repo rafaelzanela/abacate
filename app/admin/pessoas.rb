@@ -1,10 +1,11 @@
+# -*- encoding : utf-8 -*-
 ActiveAdmin.register Pessoa do
 
   index do
     column :nome
     column :documento
     column :tipo
-    column :data_nascimento
+    column :data_nascimento, :as => :datepicker
     column :situacao
     column :sexo
     default_actions
@@ -13,7 +14,7 @@ ActiveAdmin.register Pessoa do
   show do
     attributes_table do
       row :id
-      row :descricao      
+      row :nome
     end
   end
 
@@ -21,7 +22,8 @@ ActiveAdmin.register Pessoa do
     f.inputs "Dados basicos" do
       f.input :nome
       f.input :documento      
-      f.input :data_nascimento
+#      f.input :data_nascimento ,:as => :datepicker#,
+      f.input :data_nascimento ,:as => :string, :input_html => {:class => "datepicker",:dateFormat => "dd/mm/yyyy"}
       f.input :tipo
       f.input :situacao,  :as => :select, :collection => ["Ativo", "Inativo"]
       f.input :sexo,      :as => :select, :collection => ["Masculino", "Feminino"]
