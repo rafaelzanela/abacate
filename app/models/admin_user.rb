@@ -9,4 +9,12 @@ class AdminUser < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :role_id
   # attr_accessible :title, :body
+
+  def admin?
+    role_id == 1
+  end
+
+  def editor?
+    role_id == 2
+  end
 end
