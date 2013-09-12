@@ -1,5 +1,6 @@
-# -*- encoding : utf-8 -*-
 ActiveAdmin.register Pessoa do
+
+  menu :parent => "Dados Mestres"  
 
   index do
     column :nome

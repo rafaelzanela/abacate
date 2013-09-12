@@ -1,5 +1,7 @@
 ActiveAdmin.register TipoContato do
 
+  menu :parent => "Dados Mestres"
+
   index do
     column :id
     column :descricao

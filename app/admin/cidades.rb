@@ -1,5 +1,7 @@
 ActiveAdmin.register Cidade do
 
+  menu :parent => "Dados Mestres"  
+
   index do
     column :id
     column :descricao
